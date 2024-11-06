@@ -1,0 +1,40 @@
+.newsletterForm {
+  display: flex;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.emailInput {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submitButton {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #4338ca;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #3730a3;
+}
+
+@media (max-width: 768px) {
+  .newsletterForm {
+    flex-direction: column;
+  }
+
+  .emailInput,
+  .submitButton {
+    width: 100%;
+  }
+}

@@ -1,0 +1,129 @@
+.footer {
+  background-color: #1e1b4b;
+  color: #e0e7ff;
+  padding: 2rem 0 1rem;
+  font-size: 0.875rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.companyInfo {
+  flex: 0 0 100%;
+  max-width: 300px;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #c7d2fe;
+}
+
+.linksSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.linkColumn {
+  flex: 1 1 120px;
+}
+
+.columnTitle {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkList li {
+  margin-bottom: 0.5rem;
+}
+
+.linkList a {
+  color: #c7d2fe;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-size: 0.875rem;
+}
+
+.linkList a:hover {
+  color: #ffffff;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #4338ca;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLinks a {
+  color: #c7d2fe;
+  font-size: 1.25rem;
+  transition: color 0.2s;
+}
+
+.socialLinks a:hover {
+  color: #ffffff;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  color: #a5b4fc;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .companyInfo {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .linksSection {
+    width: 100%;
+  }
+
+  .bottom {
+    flex-direction: column-reverse;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+}

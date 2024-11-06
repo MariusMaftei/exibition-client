@@ -1,0 +1,217 @@
+.header {
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #111827;
+  text-decoration: none;
+}
+
+.desktopNav {
+  display: none;
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem;
+  border-bottom: 2px solid transparent;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.navLink:hover {
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+.navLink.active {
+  border-color: #6366f1;
+  color: #111827;
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.mobileMenuButton {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.menuIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #6b7280;
+}
+
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.mobileNavLink {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+  color: #374151;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.mobileNavLink.active {
+  color: #6366f1;
+}
+
+.bottomBorder {
+  height: 2px;
+  background: linear-gradient(to right, #6366f1, #8b5cf6, #ec4899);
+}
+
+.logoutButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem;
+  border: none;
+  background: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  border-bottom: 2px solid transparent;
+}
+
+.logoutButton:hover {
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+.logoutButton .icon {
+  color: #6b7280;
+}
+
+.mobileNavLink.logoutButton {
+  color: #ef4444;
+}
+
+.mobileNavLink.logoutButton:hover {
+  background-color: #fee2e2;
+}
+
+.userInfo {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.userName {
+  margin-left: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
+
+.userName:hover {
+  overflow: visible;
+  white-space: normal;
+  word-break: break-word;
+}
+
+@media (min-width: 768px) {
+  .desktopNav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .mobileMenuButton {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInDown {
+  animation: fadeInDown 0.5s ease-out;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInLeft {
+  animation: fadeInLeft 0.5s ease-out;
+}
+
+@keyframes scaleX {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.scaleX {
+  animation: scaleX 0.5s ease-out;
+}
+
+.mobileNavLink.logoutButton {
+  width: 100%;
+  text-align: left;
+}

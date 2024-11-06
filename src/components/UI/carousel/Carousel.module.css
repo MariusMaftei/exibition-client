@@ -1,0 +1,168 @@
+.carouselWrapper {
+  height: calc(100vh - 4rem);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+}
+
+.carouselContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.mainImageContainer {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.mainImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.7)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+  color: white;
+  max-width: 80%;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.buttonLink {
+  text-decoration: none;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #4338ca;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  background-color: #3730a3;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.thumbnailsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.thumbnailButton {
+  width: 80px;
+  height: 45px;
+  padding: 2px;
+  border: none;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnailButton:hover,
+.thumbnailButton:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnailImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnailButton:not(.activeThumbnail) .thumbnailImage {
+  opacity: 0.6;
+}
+
+.thumbnailButton:hover .thumbnailImage {
+  opacity: 1;
+}
+
+.activeThumbnail {
+  box-shadow: 0 0 0 2px #3b82f6, 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.activeThumbnail .thumbnailImage {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .thumbnailButton {
+    width: 60px;
+    height: 33.75px;
+  }
+
+  .thumbnailsContainer {
+    padding: 12px;
+    gap: 8px;
+  }
+}
